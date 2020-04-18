@@ -2628,7 +2628,7 @@ int DLLEXPORT EN_settankdata(EN_Project p, int index, double elev,
     Network *net = &p->network;
 
     int i, j, n, curveIndex = 0;
-    double area, elevation = elev;
+    double area, elevation = elev / Ucf[ELEV];
     double *Ucf = p->Ucf;
     Stank *Tank = net->Tank;
     Scurve *curve;
